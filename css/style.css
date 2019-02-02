@@ -105,5 +105,32 @@ footer {
 
 /* PRICES */
 
+#pricing-text {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    position: absolute;
+    font-size: 20px;
+    border: 1px solid black;
+}
 
 /* ABOUT */
+
+.about-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#about-image {
+    max-height: 600px;
+    min-height: 450px
+}
+
+#about-text {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    font-size: 20px;
+}
