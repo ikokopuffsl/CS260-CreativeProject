@@ -134,3 +134,17 @@ footer {
     padding-bottom: 5vw;
     font-size: 20px;
 }
+
+@media screen and (max-width: 600px) {
+    .about-container{
+        flex-direction:column;
+        
+    }
+    #about-text {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        font-size: 20px;
+    }
+  }
