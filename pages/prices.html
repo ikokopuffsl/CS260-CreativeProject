@@ -56,8 +56,34 @@
             </div>
             
             <hr>
-            <div>
-                <p id="pricing-text">
+            <div id="pricing-app">
+                <div id="options">
+                    <p>Please choose the services you would like</p>
+
+                    <form>
+                        <input v-model="option1Status" type="checkbox" name="option1"> {{option1Text + "\t\t\t\t$" + option1Price}}<br>
+                        <input v-model="option2Status" type="checkbox" name="option2"> {{option2Text + " $" + option2Price}}<br>
+                        <input v-model="option3Status" type="checkbox" name="option3"> {{option3Text + " $" + option3Price}}<br>  
+                        <!-- <input type="submit" value="Submit"> -->
+                    </form>
+                </div>
+
+                <div id="receipt">
+                    <p>Here are the services you ordered and the cost.</p>
+
+                    <ul>
+                        <li v-for="option in cart">
+                            <p>{{option.text}}</p>
+                        </li>
+                        <p>Total Cost: ${{totalCost}}</p>
+                    </ul>
+                    <button v-on:click="submission()" type="submit">Submit</button>
+                </div>
+                
+
+
+                  
+                <!-- <p id="pricing-text">
                     Please inquire for more information regarding pricing. 
                     <br>
                     <br>
@@ -72,8 +98,9 @@
                     Portrait sessions start at $100.
                     <br>
                     Sales tax will be applied with invoice. 
-                </p>
-                <form id="payment_form" action="your-server-side-code" method="POST">
+                </p> -->
+
+                <!-- <form id="payment_form" action="your-server-side-code" method="POST">
                     <script
                       src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                       data-key="pk_test_JovguOj6X5dcza68c2DUaURD"
@@ -83,9 +110,12 @@
                       data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
                       data-locale="auto">
                     </script>
-                </form>
+                </form> -->
                
             </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+            <script src="../script/script.js"></script>
 
         </main>
         <footer>
@@ -94,5 +124,6 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../script/vue_script.js"></script>
     </body>
 </html>

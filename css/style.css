@@ -104,6 +104,20 @@ footer {
 }
 
 /* PRICES */
+#pricing-app {
+    display: flex;
+}
+
+#options {
+    margin-left: 5vw;
+    font-size: 30px;
+    flex-grow: 1;
+}
+
+#receipt {
+    font-size: 30px;
+    flex-grow: 1;
+}
 
 #pricing-text {
     padding-left: 20%;
